@@ -1,0 +1,26 @@
+<body>
+    <div id="home-page">
+        <h1>this is Home page</h1>
+        <button onclick="goto('products-page')">Products</button>
+        <button onclick="goto('aboutMe-page')">aboutMe</button>
+    </div>
+    <div id="products-page" style="display: none;">
+        <h1>this is Products page</h1>
+        <button onclick="goto('home-page')">home</button>
+        <button onclick="goto('aboutMe-page')">aboutMe</button>
+    </div>
+    <div id="aboutMe-page" style="display: none;">
+        <h1>this is aboutMe page</h1>
+        <button onclick="goto('home-page')">home</button>
+        <button onclick="goto('products-page')">Products</button>
+    </div>
+</body>
+<script>
+    function goto(page){
+        document.getElementById("home-page").style.display = "none";
+        document.getElementById("products-page").style.display = "none";
+        document.getElementById("aboutMe-page").style.display = "none";
+
+        document.getElementById(page).style.display = "block";
+    }
+</script>
